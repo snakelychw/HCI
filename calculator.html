@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+  <title>Calculator</title>
+  <style>
+  #calculator {
+    position:absolute;
+    top:8%;
+    left:35%;
+    padding: 15px;
+    background-color: #ddd;
+    border:2px outset #EEE;
+    border-radius: 5px;
+    display: inline-block;
+    height: 420px;
+    box-shadow: 5px 5px 5px #777;
+    background: linear-gradient(to right, #aaa , #bbb);
+  }
+  button {
+    width: 90px;
+    height: 45px;
+    margin: 5px 0 3px 2px;
+    outline: 0px;
+    border:1px outset;
+    border-radius: 10px;
+    font-size: 12pt;
+    background-color: #CCC;
+  }
+  button:active {
+    box-shadow: 5px 5px 5px #666 inset;
+  }
+  button:hover {
+    background-color: #DDD;
+  }
+  #button-equal {
+  float: right;
+  height: 98px;
+  padding-top: 45px;
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+  #btn0 {
+  width: 185px;
+  }
+
+  #input {
+  font-size: 20pt;
+  border-radius: 10px;
+  border:2px outset;
+  margin: 3px 3px 10px 3px;
+  width: 378px;
+  height: 80px;
+  background-color: #dec;
+  padding-right: 19px;
+  text-align: right;
+}
+
+  </style>
+</head>
+<body>
+<div id="calculator" name="Keypad" action="">
+    <input name="ReadOut" id="input"  value = "0" readonly>
+  </input>
+    <div>
+      <button>MC</button>
+      <button>M+</button>
+      <button>M-</button>
+      <button>MR</button>
+    </div>
+    <div>
+      <button id="btnC" value="C" onclick="Clear()">C</button>
+      <button id="btnplusminus" value=" +/- " onclick="Neg()">&#177</button>
+      <button id="btndivide" value="/" onclick="Operation('/')">&#247</button>
+      <button id="btnmultiply" value="*" onclick="Operation('*')">&#215</button>
+    </div>
+    <div>
+      <button id="btn7"  value="7" onclick="NumPressed(7)">7</button>
+      <button id="btn8"  value="8" onclick="NumPressed(8)">8</button>
+      <button id="btn9"  value="9" onclick="NumPressed(9)">9</button>
+      <button id="btnminus" value="-" onclick="Operation('-')">-</button>
+    </div>
+    <div>
+      <button id="btn4"  value="4" onclick="NumPressed(4)">4</button>
+      <button id="btn5"  value="5" onclick="NumPressed(5)">5</button>
+      <button id="btn6"  value="6" onclick="NumPressed(6)">6</button>
+      <button id="btnplus" value="+" onclick="Operation('+')">+</button>
+    </div>
+    <div>
+      <button id="button-equal" value="=" onclick="Operation('=')">=</button>
+    </div>
+    <div >
+      <button id="btn7"  value="1" onclick="NumPressed(1)">1</button>
+      <button id="btn7"  value="2" onclick="NumPressed(2)">2</button>
+      <button id="btn7"  value="3" onclick="NumPressed(3)">3</button>
+    </div>
+
+    <div>
+      <button id="btn0" value="0" onclick="NumPressed(0)">0</button>
+      <button id="btndecimal" value=" ." onclick="Decimal()">.</button>
+
+    </div>
+</div>
+
+<script src="calc.js"></script>
+</body>
+</html>
